@@ -18,6 +18,7 @@ namespace LabKits
     /// <summary>
     /// KayitPopUp.xaml etkileşim mantığı
     /// </summary>
+    /// Alert popup that changes based on actions.
     public partial class KayitPopUp : Window
     {
         public KayitPopUp()
@@ -27,9 +28,7 @@ namespace LabKits
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
             Hata();
-
 
         void Hata()
         {
@@ -54,9 +53,6 @@ namespace LabKits
 
                 timer.Start();
             }
-
         }
-
-
     }
 }
