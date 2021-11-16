@@ -5,6 +5,9 @@
              xmlns:local="clr-namespace:LabKits"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+      
+      
+        <!--There are styles and design parts in the form interface.-->
         <!--Mini butonlar-->
         <Style x:Key="minibuton" TargetType="Button">
             <Setter Property="Foreground" Value="#209998"/>
@@ -330,8 +333,7 @@
                 </EventTrigger>
             </Style.Triggers>
         </Style>
-        
-        
+          
         <!--DataGrid-->
 
         <Style x:Key="GridTip1" TargetType="{x:Type DataGrid}">
@@ -353,8 +355,7 @@
                         <Setter Property="ToolTip" Value="Tıkla ve Grupla"/>
                     </Trigger>
                 </Style.Triggers>
-               
-            </Style>
+        </Style>
 
         <Style x:Key="KolonSatirTipi1" TargetType="DataGridCell">
             <Setter Property="Background" Value="{x:Null}"/>
@@ -376,12 +377,6 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        
-        
-        
-        
-        
-        
-        
+
     </Application.Resources>
 </Application>
