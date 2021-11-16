@@ -41,7 +41,6 @@ A laboratory kit tracking program. Made using C#, XAML and database used is SQLi
 - The main class where we make database queries. The main queries are always referenced from here.
 ## mainprmt.cs
 - Contains parameters to be used in operations.
-- 
 ### images file
 - It is the folder that contains the visual files of the software.
 ## banner
@@ -50,7 +49,7 @@ A laboratory kit tracking program. Made using C#, XAML and database used is SQLi
 - This folder contains the icons used in the software.
 
 ### userController file
-##CihazList
+## CihazList
 - Adds a user interface for devices on the main window.
-##KullaniciStokList
+## KullaniciStokList
 - Adds a user interface for kits on the main window.
