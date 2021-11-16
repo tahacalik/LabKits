@@ -10,7 +10,7 @@ namespace LabKits.classlar
 {
     public class DBbaglanti
     {
-        public static string DBadres = @"Data Source=C:\Users\TahaC\source\repos\LabKits\LabKits\bin\Debug\DB\ada.db;Version=3;New=False;Compress=True;Read Only=False;";
+        public static string DBadres = @"Data Source=C:\LabKits\Database\ada.db;Version=3;New=False;Compress=True;Read Only=False;";
 
         public static string Baglanti;
         public static void BaglantiTest()
