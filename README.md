@@ -14,7 +14,8 @@ A laboratory kit tracking program. Made using C#, XAML and database used is SQLi
 - SQLite
 - Visual Studio
 
-### Normal Pages
+### NORMAL PAGES
+
 ## App.xaml
 - There are styles and design parts in the form interface.
 ## CihazEklePenceresi.xaml
@@ -30,16 +31,17 @@ A laboratory kit tracking program. Made using C#, XAML and database used is SQLi
 ## MainWindows.xaml
 - It is the main block window of the software. It contains the user interface.
 
-### classlar file
+### CLASSLAR FILE
+
 ## cagir.cs
 - We use this field to open the userController on the MainWindow.
 ## DBbaglanti.cs 
 - Database connection part. Its directory is static, the database is placed in the same location in new installations.
-## DBIstem
+## DBIstem.cs
 - The main class where we make database queries. The main queries are always referenced from here.
-
-## parametreler file
-- mainprmt.cs
+## mainprmt.cs
+- Contains parameters to be used in operations.
+- 
 ### images file
 - It is the folder that contains the visual files of the software.
 ## banner
