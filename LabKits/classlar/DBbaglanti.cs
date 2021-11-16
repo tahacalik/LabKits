@@ -10,8 +10,8 @@ namespace LabKits.classlar
 {
     public class DBbaglanti
     {
+        //Database connection part. Its directory is static, the database is placed in the same location in new installations.
         public static string DBadres = @"Data Source=C:\LabKits\Database\ada.db;Version=3;New=False;Compress=True;Read Only=False;";
-
         public static string Baglanti;
         public static void BaglantiTest()
         {
