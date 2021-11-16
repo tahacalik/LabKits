@@ -20,6 +20,7 @@ namespace LabKits
     /// <summary>
     /// Guncelleme.xaml etkileşim mantığı
     /// </summary>
+    /// It visualizes kit update statuses and hosts their processes.
     public partial class Guncelleme : Window
     {
         public Guncelleme()
