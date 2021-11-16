@@ -1,4 +1,3 @@
-
 ## Explanation
 A laboratory kit tracking program. Made using C# and database used is SQLite. Comment lines are both Turkish and English.
 
