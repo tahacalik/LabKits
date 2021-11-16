@@ -18,6 +18,7 @@ namespace LabKits
     /// <summary>
     /// CihazEklePenceresi.xaml etkileşim mantığı
     /// </summary>
+    /// It visualizes device adding process and contains these operations.
     public partial class CihazEklePenceresi : Window
     {
         public CihazEklePenceresi()
