@@ -1,0 +1,129 @@
+﻿<Window x:Class="LabKits.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabKits"
+        mc:Ignorable="d"
+        Title="MainWindow" Loaded="Window_Loaded"  Height="700" Width="1100" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" Icon="/Simge.png">
+    <Grid Margin="17" x:Name="anaGrd">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="10" Direction="265" Opacity="0.47"/>
+        </Grid.Effect>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="170"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220" x:Name="menuColumn"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--Logo ve Buton-->
+        <Border Background="#209998" Grid.Column="0" Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0">
+                    <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image Source="images/icons/Baslik.png" x:Name="btn_menuList" MouseDown="btn_menuList_MouseDown" Height="24" Width="24" />
+                        <Label Content="KİT TAKİP OTOMASYONU" x:Name="baslikText"  Foreground="White" FontWeight="Bold" FontFamily="Century Gothic"/>
+                    </DockPanel>
+                </Border>
+
+                <Border Grid.Row="1">
+                    <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Image x:Name="adalablogo" Margin="0,0,0,0">
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <Setter Property="Source" Value="images/icons/logo.png"/>
+                                    <Setter Property="Height" Value="auto"/>
+                                    <Setter Property="Width" Value="195"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Source" Value="images/icons/logo.png"/>
+                                            <Setter Property="Width" Value="220"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+                    </DockPanel>
+                </Border>
+            </Grid>
+        </Border>
+
+        <!--Mini Butonlar ve Header-->
+        <Border Background="#209998" Grid.Column="1" Grid.Row="0" x:Name="brd_sagUst" MouseDown="brd_sagUst_MouseDown">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Background="White">
+                    <DockPanel Width="46" HorizontalAlignment="Right" Margin="600,0,0,0">
+                        <Button Content="__" x:Name="btn_kucult" Click="btn_kucult_Click" Style="{DynamicResource minibuton}" FontFamily="Arial" FontWeight="Bold" FontSize="15" Width="20" Margin="0,0,0,0"/>
+                        <Button Content="X" x:Name="btn_kapat" Click="btn_kapat_Click" Style="{DynamicResource minibuton}" DockPanel.Dock="Right" Width="25" HorizontalAlignment="Right"/>
+                    </DockPanel>
+                </Border>
+                <Border Grid.Row="1">
+                    <Grid>
+                        <Border>
+                            <Border.Background>
+                                <ImageBrush ImageSource="/Banner2.png"/>
+                            </Border.Background>
+                            <StackPanel VerticalAlignment="Center" Margin="30,0,569,0">
+                                <DockPanel>
+                                    <Label Content="Bağlantı Durumu:" FontSize="15" Foreground="White"/>
+                                    <Label Content="" FontSize="15" Foreground="#FF14EC14" Background="{x:Null}" x:Name="sqlDurumText" Width="162"/>
+                                </DockPanel>
+                            </StackPanel>
+                            
+                        </Border>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+
+        <!--Menü-->
+        <Border Background="#209998" Grid.Column="0" Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="170"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0">
+                    <ToggleButton Height="70" Style="{DynamicResource menubuton}" x:Name="menu_stokEkrani" Click="menu_stokEkrani_Click">
+                        <DockPanel Width="220" Margin="20,0,0,0">
+                            <Image Source="images/icons/girdi.png" Width="50"/>
+                            <Label Content="Stok" Foreground="White" FontSize="27" FontFamily="Century Gothic" x:Name="menu1"/>
+                        </DockPanel>
+                    </ToggleButton>
+                    <ToggleButton Height="70" Style="{DynamicResource menubuton}" x:Name="menu_cihazlar" Click="menu_cihazlar_Click">
+                        <DockPanel Width="220" Margin="20,0,0,0">
+                            <Image Source="images/icons/cihaz.png" Width="50"/>
+                            <Label Content="Cihazlar" Foreground="White" FontSize="27" FontFamily="Century Gothic" x:Name="menu2"/>
+                        </DockPanel>
+                    </ToggleButton>
+                </StackPanel>
+                <StackPanel Grid.Row="1">
+                    <Image Source="/images/banner/Banner.png" Height="171" x:Name="solAltBanner"/>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+
+        <!--İçerik-->
+        <Border Grid.Column="1" Grid.Row="1" Background="#FF83D1CE">
+            <Grid x:Name="icerik">
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>
