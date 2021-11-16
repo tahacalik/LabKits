@@ -1,5 +1,5 @@
 ## Explanation
-A laboratory kit tracking program. Made using C# and database used is SQLite. Comment lines are both Turkish and English.
+A laboratory kit tracking program. Made using C#, XAML and database used is SQLite. Comment lines are both Turkish and English.
 
 ## What it can do
 - Laboratory device can be added.
@@ -15,13 +15,13 @@ A laboratory kit tracking program. Made using C# and database used is SQLite. Co
 - Visual Studio
 
 ### Normal Pages
-##App.xaml
-##CihazEklePenceresi.xaml
-##Guncelleme.xaml
-##GuncellemeCihaz.xaml
-##KayitPopUp.xaml
-##kitEklePenceresi.xaml
-##MainWindows.xaml
+## App.xaml
+## CihazEklePenceresi.xaml
+## Guncelleme.xaml
+## GuncellemeCihaz.xaml
+## KayitPopUp.xaml
+## kitEklePenceresi.xaml
+## MainWindows.xaml
 
 
 ### classlar file
