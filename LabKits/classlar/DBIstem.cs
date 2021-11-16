@@ -11,6 +11,7 @@ namespace LabKits.classlar
 {
     class DBIstem
     {
+        //The main class where we make database queries. The main queries are always referenced from here.
         public static bool GridDoldur(DataGrid grd)
         {
             sbyte i = 0;
