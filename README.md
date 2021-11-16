@@ -1,5 +1,5 @@
 ## Explanation
-A laboratory kit tracking program. Made using C#, XAML and database used is SQLite. Comment lines are English.
+A laboratory kit control program. Made using C#, XAML and database used is SQLite. Comment lines are English.
 
 ## What it can do
 - Laboratory device can be added.
