@@ -29,7 +29,6 @@ namespace LabKits
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Hata();
-
         void Hata()
         {
             if(mainprmt.Hata == 1)
