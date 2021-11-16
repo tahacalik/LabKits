@@ -19,6 +19,7 @@ namespace LabKits
     /// <summary>
     /// GuncellemeCihaz.xaml etkileşim mantığı
     /// </summary>
+    /// It visualizes device update statuses and hosts their processes.
     public partial class GuncellemeCihaz : Window
     {
         public GuncellemeCihaz()
