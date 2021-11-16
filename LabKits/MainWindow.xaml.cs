@@ -20,6 +20,7 @@ namespace LabKits
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// It is the main block window of the software. It contains the user interface.
     public partial class MainWindow : Window
     {
         public MainWindow()
