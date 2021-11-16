@@ -51,6 +51,6 @@ A laboratory kit tracking program. Made using C#, XAML and database used is SQLi
 
 ### userController file
 ##CihazList
-- Adds a user interface for devices on the main window
+- Adds a user interface for devices on the main window.
 ##KullaniciStokList
-- Adds a user interface for kits on the main window
+- Adds a user interface for kits on the main window.
