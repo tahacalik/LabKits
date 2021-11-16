@@ -16,13 +16,19 @@ A laboratory kit tracking program. Made using C#, XAML and database used is SQLi
 
 ### Normal Pages
 ## App.xaml
+- There are styles and design parts in the form interface.
 ## CihazEklePenceresi.xaml
+- It visualizes device adding process and contains these operations.
 ## Guncelleme.xaml
+- It visualizes kit update statuses and hosts their processes.
 ## GuncellemeCihaz.xaml
+- It visualizes device update statuses and hosts their processes.
 ## KayitPopUp.xaml
+- Alert popup that changes based on actions.
 ## kitEklePenceresi.xaml
+- It visualizes kit adding process and contains these operations.
 ## MainWindows.xaml
-
+- It is the main block window of the software. It contains the user interface.
 
 ### classlar file
 ## cagir.cs
@@ -36,12 +42,13 @@ A laboratory kit tracking program. Made using C#, XAML and database used is SQLi
 - mainprmt.cs
 ### images file
 - It is the folder that contains the visual files of the software.
-##banner
+## banner
 - This folder contains images used in areas such as backgrounds.
-##icons
+## icons
 - This folder contains the icons used in the software.
 
 ### userController file
 ##CihazList
+- Adds a user interface for devices on the main window
 ##KullaniciStokList
-
+- Adds a user interface for kits on the main window
