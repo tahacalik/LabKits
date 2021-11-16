@@ -28,10 +28,8 @@ namespace LabKits.classlar
                     {
                         Baglanti = "Bağlantı Hatası...";
                     }
-                    
-                    
+                         
                 }
-
                 else
                 {
                     Baglanti = "Bağlantı Sağlandı..";
