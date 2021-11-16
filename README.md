@@ -12,7 +12,7 @@ A laboratory kit tracking program. Made using C# and database used is SQLite. Co
 ## Requirements
 - C#
 - SQLite
-- Visual 
+- Visual Studio
 
 ### Normal Pages
 ##App.xaml
