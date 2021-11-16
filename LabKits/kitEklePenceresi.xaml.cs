@@ -23,6 +23,7 @@ namespace LabKits
     /// <summary>
     /// kitEklePenceresi.xaml etkileşim mantığı
     /// </summary>
+    /// It visualizes kit adding process and contains these operations.
     public partial class kitEklePenceresi : Window
     {
 
