@@ -50,7 +50,7 @@ namespace LabKits
         {
 
             KayitPopUp bilgi = new KayitPopUp();
-
+            //This part is used to write the device list to the combobox.
             if (txt_kitadi.Text != "" && txt_Lot.Text != "" && cmb_cihaz.Text !="" && txt_Adet.Text!="")
             {
                 int cihazCode = 0;
