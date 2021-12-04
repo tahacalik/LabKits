@@ -14,7 +14,7 @@
         <Canvas Margin="0,0,0,0" Grid.RowSpan="2">
             <Image Source="images\icons\Cihaz.png" Height="130" Width="59" Canvas.Left="27" Canvas.Top="-11" Panel.ZIndex="3"/>
             <Label Content="Cihaz Ekleme Penceresi" Foreground="White" Panel.ZIndex="6" FontFamily="Cambria" FontSize="40" Canvas.Left="111" Canvas.Top="35"/>
-            <Ellipse Height="110" Width="110" Canvas.Left="3" Panel.ZIndex="2" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource RotationEffect}" Fill="#FF209889">
+            <Ellipse Height="110" Width="110" Canvas.Left="3" Panel.ZIndex="2" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource RotationEffect}" Fill="#2d7fac">
                 <Ellipse.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -30,12 +30,12 @@
                     </LinearGradientBrush>
                 </Ellipse.Stroke>
             </Ellipse>
-            <Rectangle Height="66" Width="538" Canvas.Left="27" Canvas.Top="30" RenderTransformOrigin="0.5,0.5" Fill="#209998" Panel.ZIndex="1"/>
+            <Rectangle Height="66" Width="538" Canvas.Left="27" Canvas.Top="30" RenderTransformOrigin="0.5,0.5" Fill="#FF0575B4" Panel.ZIndex="1"/>
             <Border Height="215" Width="496" Canvas.Left="69" Canvas.Top="40" CornerRadius="0,0,50,50">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#00AAAB"/>
-                        <GradientStop Color="#FF425958" Offset="1"/>
+                        <GradientStop Color="#FF0575B4"/>
+                        <GradientStop Color="#FF6A93AA" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
 

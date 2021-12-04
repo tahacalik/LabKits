@@ -5,40 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabKits"
         mc:Ignorable="d"
-        Title="Guncelleme" Height="382" Width="485" Background="{x:Null}" Foreground="Black" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" WindowStartupLocation="CenterOwner">
-    <Grid Margin="0,0,0,0">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="386*"/>
-            <ColumnDefinition Width="11*"/>
-        </Grid.ColumnDefinitions>
+        Title="Guncelleme" Height="613" Width="485" Background="{x:Null}" Foreground="Black" AllowsTransparency="True" WindowStyle="None" Loaded="Window_Loaded" WindowStartupLocation="CenterOwner">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="154"/>
+            <RowDefinition Height="160"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Canvas Grid.Row="0" Margin="0,0,13,0" Panel.ZIndex="3" Grid.ColumnSpan="2">
-            <Border Height="154" Width="472" CornerRadius="60,60,15,15">
+            <Border Height="159" Width="472" CornerRadius="60,60,15,15">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FF4CA8D3"/>
-                        <GradientStop Color="#FF209889" Offset="1"/>
+                        <GradientStop Color="#FF0584BF"/>
+                        <GradientStop Color="#FF6A93AA" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
-            <Label Content="ARA" Canvas.Left="397" Canvas.Top="52" Background="{x:Null}" Foreground="White"/>
-            <Label Content="SİL" Canvas.Left="406" Canvas.Top="82" Background="{x:Null}" Foreground="White" Width="24"/>
-            <Label Content="GÜNCELLE" Canvas.Left="363" Canvas.Top="111" Background="{x:Null}" Foreground="White"/>
+            <Label Content="ARA" Canvas.Left="413" Canvas.Top="52" Background="{x:Null}" Foreground="White"/>
+            <Label Content="SİL" Canvas.Left="422" Canvas.Top="82" Background="{x:Null}" Foreground="White" Width="24"/>
+            <Label Content="GÜNCELLE" Canvas.Left="379" Canvas.Top="111" Background="{x:Null}" Foreground="White"/>
             <Label Content="Kit Güncelleme Ekranı" Canvas.Left="104" FontSize="20" FontFamily="Cambria" FontWeight="Bold" Background="{x:Null}" Foreground="White"/>
             <Label Content="Kit Adı:" FontSize="24" FontFamily="Cambria" FontWeight="Bold" Background="{x:Null}" Foreground="White" Canvas.Top="39"/>
             <Label Content="Lot:" Canvas.Left="40" FontSize="24" FontFamily="Cambria" FontWeight="Bold" Background="{x:Null}" Foreground="White" Canvas.Top="77"/>
             <Label Content="Adet:" Canvas.Left="24" FontSize="24" FontFamily="Cambria" FontWeight="Bold" Background="{x:Null}" Foreground="White" Canvas.Top="116"/>
-            <Label Content="ID:" Canvas.Left="166" FontSize="24" FontFamily="Cambria" FontWeight="Bold" Background="{x:Null}" Foreground="White" Canvas.Top="116"/>
+            <Label Content="ID:" Canvas.Left="166" FontSize="24" FontFamily="Cambria" FontWeight="Bold" Background="{x:Null}" Foreground="White" Canvas.Top="116" Visibility="Hidden"/>
+            <Label Content="Cihaz:" Canvas.Left="166" FontSize="18" FontFamily="Cambria" FontWeight="Bold" Background="{x:Null}" Foreground="White" Canvas.Top="122"/>
             <TextBox Canvas.Left="92" Canvas.Top="43" Width="239" x:Name="txt_KitAdi"  Text="{Binding SelectedItem.kitAdi, ElementName=dtg_GuncellemeListesi}" Height="30" FontSize="22" FontFamily="Cambria"/>
             <TextBox Canvas.Left="92" Canvas.Top="81" Width="239" x:Name="txt_KitLot" Text="{Binding SelectedItem.kitLot, ElementName=dtg_GuncellemeListesi}" Height="30" FontFamily="Cambria" FontSize="22"/>
             <TextBox Canvas.Left="92" Canvas.Top="120" Width="69" x:Name="txt_KitAdet" Text="{Binding SelectedItem.kitAdet, ElementName=dtg_GuncellemeListesi}" Height="30" FontFamily="Cambria" FontSize="22"/>
-            <TextBox Canvas.Left="208" Canvas.Top="120" Width="37" x:Name="txt_KitId" Text="{Binding SelectedItem.kitId, ElementName=dtg_GuncellemeListesi}" Height="30" FontFamily="Cambria" FontSize="22" IsReadOnly="True"/>
-
-            <Button Canvas.Left="417" Style="{DynamicResource AraButton}" x:Name="guncelleAra" Click="guncelleAra_Click" RenderTransformOrigin="0.5,0.5" Canvas.Top="40">
+            <TextBox Canvas.Left="208" Canvas.Top="120" Width="37" x:Name="txt_KitId" Text="{Binding SelectedItem.kitId, ElementName=dtg_GuncellemeListesi}" Height="30" FontFamily="Cambria" FontSize="22" IsReadOnly="True" Visibility="Hidden"/>
+            <Label Content="{Binding SelectedItem.CihazAdi, ElementName=dtg_GuncellemeListesi}" Canvas.Left="218" Canvas.Top="120" Height="34" Width="161" FontSize="18" Foreground="Lime" Background="{x:Null}"/>
+            <Button Canvas.Left="433" Style="{DynamicResource AraButton}" x:Name="guncelleAra" Click="guncelleAra_Click" RenderTransformOrigin="0.5,0.5" Canvas.Top="40">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
@@ -49,7 +46,7 @@
                 </Button.RenderTransform>
             </Button>
 
-            <Button Canvas.Left="417" Style="{DynamicResource AraButton}" x:Name="guncelleSil" Click="guncelleSil_Click" RenderTransformOrigin="0.5,0.5" Canvas.Top="69">
+            <Button Canvas.Left="433" Style="{DynamicResource AraButton}" x:Name="guncelleSil" Click="guncelleSil_Click" RenderTransformOrigin="0.5,0.5" Canvas.Top="69">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
@@ -60,7 +57,7 @@
                 </Button.RenderTransform>
             </Button>
 
-            <Button Canvas.Left="417" Style="{DynamicResource GuncelleButton}" x:Name="guncelleGuncelle" Click="guncelleGuncelle_Click" RenderTransformOrigin="0.5,0.5" Canvas.Top="99">
+            <Button Canvas.Left="433" Style="{DynamicResource GuncelleButton}" x:Name="guncelleGuncelle" Click="guncelleGuncelle_Click" RenderTransformOrigin="0.5,0.5" Canvas.Top="99">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
@@ -86,7 +83,15 @@
         </Canvas>
 
         <Border Grid.Row="1" Margin="11,0,12,0">
-            <DataGrid x:Name="dtg_GuncellemeListesi" ItemsSource="{Binding}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF209998" IsReadOnly="True" RowHeight="30" CanUserAddRows="False" CanUserSortColumns="True" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Cambria" FontSize="20" FontWeight="Normal" HorizontalGridLinesBrush="#FF208998" VerticalGridLinesBrush="#FF208998" HeadersVisibility="Column" AutoGenerateColumns="False" Style="{DynamicResource GridTip1}" Height="228">
+            <DataGrid x:Name="dtg_GuncellemeListesi" ItemsSource="{Binding}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#2d7fac" IsReadOnly="True" RowHeight="30" CanUserAddRows="False" CanUserSortColumns="True" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Cambria" FontSize="20" FontWeight="Normal" HorizontalGridLinesBrush="#FF2D7FAC" VerticalGridLinesBrush="#FF2D7FAC" HeadersVisibility="Column" AutoGenerateColumns="False" Style="{DynamicResource GridTip1}" Height="457" RenderTransformOrigin="0.5,0.5">
+                <DataGrid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.204"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.746"/>
+                    </TransformGroup>
+                </DataGrid.RenderTransform>
                 <DataGrid.Columns>
 
 
@@ -101,7 +106,7 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#FF2D7FAC"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>
@@ -130,7 +135,7 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#FF2D7FAC"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>
@@ -159,7 +164,7 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#FF2D7FAC"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>

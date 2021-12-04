@@ -20,7 +20,7 @@
         </Grid.ColumnDefinitions>
 
         <!--Logo ve Buton-->
-        <Border Background="#209998" Grid.Column="0" Grid.Row="0">
+        <Border Background="#2d7fac" Grid.Column="0" Grid.Row="0">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="35"/>
@@ -57,32 +57,29 @@
         </Border>
 
         <!--Mini Butonlar ve Header-->
-        <Border Background="#209998" Grid.Column="1" Grid.Row="0" x:Name="brd_sagUst" MouseDown="brd_sagUst_MouseDown">
+        <Border Background="Red" Grid.Column="1" Grid.Row="0" x:Name="brd_sagUst" MouseDown="brd_sagUst_MouseDown">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="25"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <Border Grid.Row="0" Background="White">
+                <Border Grid.Row="0" Background="#2d7fac">
                     <DockPanel Width="46" HorizontalAlignment="Right" Margin="600,0,0,0">
-                        <Button Content="__" x:Name="btn_kucult" Click="btn_kucult_Click" Style="{DynamicResource minibuton}" FontFamily="Arial" FontWeight="Bold" FontSize="15" Width="20" Margin="0,0,0,0"/>
-                        <Button Content="X" x:Name="btn_kapat" Click="btn_kapat_Click" Style="{DynamicResource minibuton}" DockPanel.Dock="Right" Width="25" HorizontalAlignment="Right"/>
+                        <Button Content="__" x:Name="btn_kucult" Click="btn_kucult_Click" Style="{DynamicResource minibuton}" FontFamily="Arial" FontWeight="Bold" FontSize="18" Width="22" Margin="0,0,0,0"/>
+                        <Button Content="X" x:Name="btn_kapat" Click="btn_kapat_Click" Style="{DynamicResource minibuton}" DockPanel.Dock="Right" Width="26" FontSize="25" Margin="0,0,0,0" FontStyle="Normal" FontWeight="Normal" FontFamily="Bahnschrift SemiLight" Height="25"/>
                     </DockPanel>
                 </Border>
                 <Border Grid.Row="1">
                     <Grid>
-                        <Border>
-                            <Border.Background>
-                                <ImageBrush ImageSource="/Banner2.png"/>
-                            </Border.Background>
+                        <Border Background="#2d7fac">
                             <StackPanel VerticalAlignment="Center" Margin="30,0,569,0">
                                 <DockPanel>
                                     <Label Content="Bağlantı Durumu:" FontSize="15" Foreground="White"/>
                                     <Label Content="" FontSize="15" Foreground="#FF14EC14" Background="{x:Null}" x:Name="sqlDurumText" Width="162"/>
                                 </DockPanel>
                             </StackPanel>
-                            
+
                         </Border>
                     </Grid>
                 </Border>
@@ -90,7 +87,7 @@
         </Border>
 
         <!--Menü-->
-        <Border Background="#209998" Grid.Column="0" Grid.Row="1">
+        <Border Background="#2d7fac" Grid.Column="0" Grid.Row="1">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -112,14 +109,14 @@
                     </ToggleButton>
                 </StackPanel>
                 <StackPanel Grid.Row="1">
-                    <Image Source="/images/banner/Banner.png" Height="171" x:Name="solAltBanner"/>
+                    <Image Source="/images/banner/Banner.png" Height="171" x:Name="solAltBanner" Stretch="Uniform" StretchDirection="UpOnly" Opacity="0.85"/>
                 </StackPanel>
             </Grid>
 
         </Border>
 
         <!--İçerik-->
-        <Border Grid.Column="1" Grid.Row="1" Background="#FF83D1CE">
+        <Border Grid.Column="1" Grid.Row="1" Background="#6a93aa">
             <Grid x:Name="icerik">
 
             </Grid>

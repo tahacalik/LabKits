@@ -12,20 +12,21 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Background="#FF209998" Grid.Row="1">
+        <Border Background="#2d7fac" Grid.Row="1">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <ComboBox Width="221" Height="26" Style="{DynamicResource ComboBoxFlatStyle}" x:Name="cmb_cihaz" FontSize="15" SelectionChanged="cmb_cihaz_SelectionChanged_1" Margin="0,0,10,0" Text="Cihazlar"/>
+                <Button Style="{DynamicResource kitEkle}" Content="Filtrele" x:Name="btn_filter" Click="btn_filter_Click" VerticalContentAlignment="Center" Margin="0,0,47,0" Height="25" Width="80" FontSize="16"/>
                 <Button Style="{DynamicResource kitEkle}" Content="Kit Girişi" x:Name="btn_kitEkle" Click="btn_kitEkle_Click" VerticalContentAlignment="Center" Margin="0,0,15,0" Height="25" Width="80" FontSize="16"/>
                 <Button Style="{DynamicResource kitEkle}" Content="Kit Güncelleme" x:Name="btn_kitSil" Click="btn_kitSil_Click" VerticalContentAlignment="Center" Margin="0,0,15,0" Height="26" Width="120" FontSize="16"/>
-
             </StackPanel>
         </Border>
 
         <Border Grid.Row="0">
-            <DataGrid x:Name="dtg_stokListesi" ItemsSource="{Binding}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF209998" IsReadOnly="True" RowHeight="30" CanUserAddRows="False" CanUserSortColumns="True" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Cambria" FontSize="20" FontWeight="Normal" HorizontalGridLinesBrush="#FF208998" VerticalGridLinesBrush="#FF208998" HeadersVisibility="Column" AutoGenerateColumns="False" Style="{DynamicResource GridTip1}" Margin="-2,0,0,0">
+            <DataGrid x:Name="dtg_stokListesi" ItemsSource="{Binding}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#2d7fac" IsReadOnly="True" RowHeight="25" CanUserAddRows="False" CanUserSortColumns="True" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Cambria" FontSize="16" FontWeight="Normal" HorizontalGridLinesBrush="#2d7fac" VerticalGridLinesBrush="#2d7fac" HeadersVisibility="Column" AutoGenerateColumns="False" Style="{DynamicResource GridTip1}" Margin="-2,0,0,0">
                 <DataGrid.Columns>
 
 
-                    <DataGridTextColumn Binding="{Binding Path=kitAdi}" IsReadOnly="True" Header="KİT ADI" MinWidth="170" >
+                    <DataGridTextColumn Binding="{Binding Path=kitAdi}" IsReadOnly="True" Header="KİT ADI" MinWidth="190" >
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -36,7 +37,7 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#2d7fac"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>
@@ -54,7 +55,7 @@
 
                     </DataGridTextColumn>
 
-                    <DataGridTextColumn Binding="{Binding Path=CihazAdi}" IsReadOnly="True" Header="CİHAZ" MinWidth="90" >
+                    <DataGridTextColumn Binding="{Binding Path=CihazAdi}" IsReadOnly="True" Header="CİHAZ" MinWidth="65" >
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -65,7 +66,7 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#2d7fac"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>
@@ -83,7 +84,7 @@
 
                     </DataGridTextColumn>
 
-                    <DataGridTextColumn Binding="{Binding Path=kitAdet}" IsReadOnly="True" Header="STOK" MinWidth="25" >
+                    <DataGridTextColumn Binding="{Binding Path=kitAdet}" IsReadOnly="True" Header="KİT ADET" MinWidth="25" >
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -94,7 +95,7 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#2d7fac"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>
@@ -112,7 +113,7 @@
 
                     </DataGridTextColumn>
 
-                    <DataGridTextColumn Binding="{Binding Path=kitLot}" IsReadOnly="True" Header="LOT" MinWidth="200" >
+                    <DataGridTextColumn Binding="{Binding Path=kitKullanilabilir}" IsReadOnly="True" Header="ÇALIŞILABİLİR HASTA" MinWidth="20">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -123,7 +124,37 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#2d7fac"/>
+                                <Setter Property="BorderThickness" Value="5,0,0,0"/>
+                                <Setter Property="BorderBrush" Value="#FF063D3E"/>
+                                <Setter Property="Foreground" Value="White"/>
+
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="White"/>
+                                        <Setter Property="BorderThickness" Value="5,0,0,0"/>
+                                        <Setter Property="BorderBrush" Value="#FF686868"/>
+                                        <Setter Property="Foreground" Value="#FF063D3E"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+
+                    </DataGridTextColumn>
+
+
+                    <DataGridTextColumn Binding="{Binding Path=kitLot}" IsReadOnly="True" Header="LOT" MinWidth="160" >
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Left"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                <Setter Property="Padding" Value="5"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Background" Value="#2d7fac"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>
@@ -152,7 +183,7 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#2d7fac"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>
@@ -170,6 +201,34 @@
 
                     </DataGridTextColumn>
 
+                    <DataGridTextColumn Binding="{Binding Path=kitSKT, StringFormat=dd.MM.yyyy}" IsReadOnly="True" Header="SON KULLANIM" MinWidth="75" >
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Left"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                <Setter Property="Padding" Value="5"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Background" Value="#2d7fac"/>
+                                <Setter Property="BorderThickness" Value="5,0,0,0"/>
+                                <Setter Property="BorderBrush" Value="#FF063D3E"/>
+                                <Setter Property="Foreground" Value="White"/>
+
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="White"/>
+                                        <Setter Property="BorderThickness" Value="5,0,0,0"/>
+                                        <Setter Property="BorderBrush" Value="#FF686868"/>
+                                        <Setter Property="Foreground" Value="#FF063D3E"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+
+                    </DataGridTextColumn>
 
 
                 </DataGrid.Columns>

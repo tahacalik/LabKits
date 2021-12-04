@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LabKits"
         mc:Ignorable="d"
-        Title="kitEklePenceresi" Height="438" Width="578" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" Loaded="Window_Loaded">
+        Title="kitEklePenceresi" Height="450" Width="578" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid Margin="0,0,0,102">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -14,7 +14,7 @@
         <Canvas Margin="0,0,0,-99" Grid.RowSpan="2">
             <Image Source="images\icons\Girdi.png" Height="130" Width="59" Canvas.Left="23" Canvas.Top="-11" Panel.ZIndex="3"/>
             <Label Content="Kit Ekleme Penceresi" Foreground="White" Panel.ZIndex="6" FontFamily="Cambria" FontSize="45" Canvas.Left="123" Canvas.Top="30"/>
-            <Ellipse Height="110" Width="110" Canvas.Left="3" Panel.ZIndex="2" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource RotationEffect}" Fill="#FF209889">
+            <Ellipse Height="110" Width="110" Canvas.Left="3" Panel.ZIndex="2" StrokeThickness="4" RenderTransformOrigin="0.5,0.5" Style="{DynamicResource RotationEffect}" Fill="#2d7fac">
                 <Ellipse.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -30,27 +30,27 @@
                     </LinearGradientBrush>
                 </Ellipse.Stroke>
             </Ellipse>
-            <Rectangle Height="66" Width="538" Canvas.Left="27" Canvas.Top="30" RenderTransformOrigin="0.5,0.5" Fill="#209998" Panel.ZIndex="1"/>
-            <Border Height="384" Width="496" Canvas.Left="69" Canvas.Top="40" CornerRadius="0,0,50,50">
+            <Rectangle Height="66" Width="538" Canvas.Left="27" Canvas.Top="30" RenderTransformOrigin="0.5,0.5" Fill="#2d7fac" Panel.ZIndex="1"/>
+            <Border Height="405" Width="496" Canvas.Left="69" Canvas.Top="40" CornerRadius="0,0,50,50">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#00AAAB"/>
-                        <GradientStop Color="#FF425958" Offset="1"/>
+                        <GradientStop Color="#2d7fac"/>
+                        <GradientStop Color="#FF6A93AA" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
 
             </Border>
 
-            <Label Content="KİT ADI:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="75" Canvas.Top="119" Height="60" FontWeight="Bold"/>
-            <TextBox Canvas.Left="182" Canvas.Top="122" Width="350" Height="31" x:Name="txt_kitadi" FontSize="25" FontFamily="Cambria"/>
-            <Label Content="CİHAZ:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="93" Canvas.Top="179" Height="60" FontWeight="Bold"/>
-            <ComboBox Canvas.Left="182" Canvas.Top="170" Width="350" Height="42" Style="{DynamicResource ComboBoxFlatStyle}" x:Name="cmb_cihaz" FontSize="25" SelectionChanged="cmb_cihaz_SelectionChanged"/>
-            <Label Content="LOT:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="119" Canvas.Top="232" Height="60" FontWeight="Bold"/>
-            <TextBox Canvas.Left="182" Canvas.Top="236" Width="350" Height="31" x:Name="txt_Lot" FontFamily="Cambria" FontSize="25"/>
+            <Label Content="KİT ADI:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="75" Canvas.Top="110" Height="60" FontWeight="Bold"/>
+            <TextBox Canvas.Left="182" Canvas.Top="114" Width="350" Height="31" x:Name="txt_kitadi" FontSize="25" FontFamily="Cambria"/>
+            <Label Content="CİHAZ:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="93" Canvas.Top="164" Height="60" FontWeight="Bold"/>
+            <ComboBox Canvas.Left="182" Canvas.Top="158" Width="350" Height="42" Style="{DynamicResource ComboBoxFlatStyle}" x:Name="cmb_cihaz" FontSize="25" SelectionChanged="cmb_cihaz_SelectionChanged"/>
+            <Label Content="LOT:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="119" Canvas.Top="209" Height="60" FontWeight="Bold"/>
+            <TextBox Canvas.Left="182" Canvas.Top="213" Width="350" Height="31" x:Name="txt_Lot" FontFamily="Cambria" FontSize="25"/>
             <!--<PreviewTextInput="txt_Eklenen_PreviewTextInput"-->
 
 
-            <Button Canvas.Left="93" Canvas.Top="355" Style="{DynamicResource YuvarlakButon}" x:Name="ekleIslemTamam" Click="ekleIslemTamam_Click" RenderTransformOrigin="0.5,0.5">
+            <Button Canvas.Left="93" Canvas.Top="369" Style="{DynamicResource YuvarlakButon}" x:Name="ekleIslemTamam" Click="ekleIslemTamam_Click" RenderTransformOrigin="0.5,0.5" Background="#FF834444">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
@@ -60,7 +60,7 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Button Canvas.Left="491" Canvas.Top="355" Style="{DynamicResource YuvarlakButon2}" x:Name="eklePencereKpt" Click="eklePencereKpt_Click" RenderTransformOrigin="0.5,0.5">
+            <Button Canvas.Left="491" Canvas.Top="369" Style="{DynamicResource YuvarlakButon2}" x:Name="eklePencereKpt" Click="eklePencereKpt_Click" RenderTransformOrigin="0.5,0.5">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform ScaleX="1.3" ScaleY="1.3"/>
@@ -70,8 +70,12 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
-            <Label Content="ADET:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="101" Canvas.Top="288" Height="60" FontWeight="Bold"/>
-            <TextBox Canvas.Left="182" Canvas.Top="292" Width="350" Height="32" x:Name="txt_Adet" FontFamily="Cambria" FontSize="25" PreviewTextInput="txt_Adet_PreviewTextInput"/>
+            <Label Content="ADET:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="101" Canvas.Top="255" Height="60" FontWeight="Bold"/>
+            <TextBox Canvas.Left="182" Canvas.Top="257" Width="79" Height="32" x:Name="txt_Adet" FontFamily="Cambria" FontSize="25" PreviewTextInput="txt_Adet_PreviewTextInput"/>
+            <Label Content="HASTA SAYISI:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="272" Canvas.Top="255" Height="60" FontWeight="Bold"/>
+            <TextBox Canvas.Left="443" Canvas.Top="257" Width="89" Height="32" x:Name="txt_Hasta" FontFamily="Cambria" FontSize="25" PreviewTextInput="txt_Hasta_PreviewTextInput"/>
+            <Label Content="SON KULLANMA TARİHİ:" FontFamily="Cambria" Background="{x:Null}" Foreground="White" FontSize="25" Canvas.Left="101" Canvas.Top="306" Height="60" FontWeight="Bold"/>
+            <DatePicker Canvas.Left="390" Canvas.Top="306" Width="142" Height="36" FontSize="20" x:Name="dt_Skt"/>
 
         </Canvas>
     </Grid>

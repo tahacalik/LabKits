@@ -51,7 +51,7 @@ namespace LabKits
 
             KayitPopUp bilgi = new KayitPopUp();
             //This part is used to write the device list to the combobox.
-            if (txt_kitadi.Text != "" && txt_Lot.Text != "" && cmb_cihaz.Text !="" && txt_Adet.Text!="")
+            if (txt_kitadi.Text != "" && txt_Lot.Text != "" && cmb_cihaz.Text !="" && txt_Adet.Text!="" && txt_Hasta.Text != "" && dt_Skt.Text !="")
             {
                 int cihazCode = 0;
                 string[] cihazDizi = new string[cmb_cihaz.Items.Count];
@@ -67,9 +67,12 @@ namespace LabKits
                     }
                 }
                 mainprmt veri = new mainprmt();
+                DateTime skt = dt_Skt.SelectedDate.Value;
+                veri.KitSkt = skt.Date.ToString("yyyy-MM-dd");
                 veri.KitCihaz = cihazCode;
                 veri.KitAdi = txt_kitadi.Text;
                 veri.KitAdet = Int32.Parse(txt_Adet.Text);
+                veri.KitHasta = Int32.Parse(txt_Hasta.Text);
                 veri.KitLot = txt_Lot.Text;
                 DateTime dt = DateTime.Now;
                 veri.GirisTarihi = dt.Date.ToString("yyyy-MM-dd");
@@ -122,6 +125,15 @@ namespace LabKits
         private void txt_Adet_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             if (!char.IsDigit(e.Text,e.Text.Length - 1))
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void txt_Hasta_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!char.IsDigit(e.Text, e.Text.Length - 1))
             {
                 e.Handled = true;
 

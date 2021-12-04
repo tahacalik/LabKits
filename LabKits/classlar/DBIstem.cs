@@ -16,7 +16,7 @@ namespace LabKits.classlar
         {
             sbyte i = 0;
             SQLiteConnection con = new SQLiteConnection(DBbaglanti.DBadres);
-            SQLiteCommand com = new SQLiteCommand("Select kitler.kitId, kitler.girisTarihi, kitler.kitAdi, kitler.kitAdet, kitler.kitLot, cihazlar.CihazAdi From kitler Inner Join cihazlar on cihazlar.CihazId = kitler.KitCihaz", con);
+            SQLiteCommand com = new SQLiteCommand("Select kitler.kitId, kitler.girisTarihi, kitler.kitAdi, kitler.kitAdet, kitler.kitLot, kitler.kitSKT, kitler.kitKullanilabilir, cihazlar.CihazAdi From kitler Inner Join cihazlar on cihazlar.CihazId = kitler.KitCihaz", con);
             try
             {
                 SQLiteDataAdapter adp = new SQLiteDataAdapter(com);
@@ -74,7 +74,9 @@ namespace LabKits.classlar
         {
             sbyte i = 0;
             SQLiteConnection con = new SQLiteConnection(DBbaglanti.DBadres);
-            SQLiteCommand com = new SQLiteCommand("SELECT cihazlar.cihazAdi, cihazlar.CihazId, COUNT(kitler.kitId) AS 'tanimliKit' FROM kitler, cihazlar WHERE cihazlar.CihazId = kitler.kitCihaz GROUP BY cihazlar.CihazId", con);
+            //SQLiteCommand com = new SQLiteCommand("SELECT cihazlar.cihazAdi, cihazlar.CihazId, count(kitler.kitId) as 'tanimlikit' FROM kitler, cihazlar WHERE cihazlar.CihazId = kitler.kitCihaz GROUP BY cihazlar.CihazId", con);
+            SQLiteCommand com = new SQLiteCommand("SELECT * from cihazlar", con);
+
             try
             {
                 SQLiteDataAdapter adp = new SQLiteDataAdapter(com);
@@ -104,13 +106,15 @@ namespace LabKits.classlar
         {
             sbyte i = 0;
             SQLiteConnection con = new SQLiteConnection(DBbaglanti.DBadres);
-            SQLiteCommand com = new SQLiteCommand("Insert into kitler (kitAdi, kitLot, kitCihaz, kitAdet, girisTarihi) values (@kitAdi,@kitLot,@kitCihaz,@kitAdet,@girisTarihi)", con);
+            SQLiteCommand com = new SQLiteCommand("Insert into kitler (kitAdi, kitLot, kitCihaz, kitAdet, girisTarihi, kitHasta, kitSKT) values (@kitAdi,@kitLot,@kitCihaz,@kitAdet,@girisTarihi,@kitHasta,@kitSkt)", con);
 
             com.Parameters.AddWithValue("@kitAdi", veri.KitAdi);
             com.Parameters.AddWithValue("@kitLot", veri.KitLot);
             com.Parameters.AddWithValue("@kitCihaz", veri.KitCihaz);
             com.Parameters.AddWithValue("@kitAdet", veri.KitAdet);
+            com.Parameters.AddWithValue("@kitHasta", veri.KitHasta);
             com.Parameters.AddWithValue("@girisTarihi", veri.GirisTarihi);
+            com.Parameters.AddWithValue("@kitSKT", veri.KitSkt);
 
             try
             {

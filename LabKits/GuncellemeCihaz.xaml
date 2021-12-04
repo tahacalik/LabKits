@@ -21,7 +21,7 @@
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF4CA8D3"/>
-                        <GradientStop Color="#FF209889" Offset="1"/>
+                        <GradientStop Color="#2d7fac" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
@@ -72,10 +72,10 @@
         </Canvas>
 
         <Border Grid.Row="1" Margin="11,0,12,0">
-            <DataGrid x:Name="dtg_cihazListesi" ItemsSource="{Binding}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF209998" IsReadOnly="True" RowHeight="30" CanUserAddRows="False" CanUserSortColumns="True" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Cambria" FontSize="24" FontWeight="Normal" HorizontalGridLinesBrush="#FF208998" VerticalGridLinesBrush="#FF208998" HeadersVisibility="Column" AutoGenerateColumns="False" Style="{DynamicResource GridTip1}" Height="228" Margin="0,40,0,0">
+            <DataGrid x:Name="dtg_cihazListesi" ItemsSource="{Binding}" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF209998" IsReadOnly="True" RowHeight="30" CanUserAddRows="False" CanUserSortColumns="True" CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Cambria" FontWeight="Normal" HorizontalGridLinesBrush="#FF208998" VerticalGridLinesBrush="#FF208998" HeadersVisibility="Column" AutoGenerateColumns="False" Style="{DynamicResource GridTip1}" Height="265">
                 <DataGrid.Columns>
 
-                    <DataGridTextColumn Binding="{Binding Path=CihazId}" IsReadOnly="True" Header="ID" MinWidth="30" >
+                    <DataGridTextColumn Binding="{Binding Path=CihazId}" IsReadOnly="True" Header="ID" CanUserResize="False" FontSize="22" >
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -86,7 +86,7 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#FF2D7FAC"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>
@@ -104,7 +104,7 @@
 
                     </DataGridTextColumn>
 
-                    <DataGridTextColumn Binding="{Binding Path=CihazAdi}" IsReadOnly="True" Header="KİT ADI" MinWidth="170" >
+                    <DataGridTextColumn Binding="{Binding Path=CihazAdi}" IsReadOnly="True" Header="CİHAZ ADI" FontSize="22">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -115,7 +115,7 @@
 
                         <DataGridTextColumn.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="Background" Value="#209998"/>
+                                <Setter Property="Background" Value="#FF2D7FAC"/>
                                 <Setter Property="BorderThickness" Value="5,0,0,0"/>
                                 <Setter Property="BorderBrush" Value="#FF063D3E"/>
                                 <Setter Property="Foreground" Value="White"/>
@@ -132,7 +132,6 @@
                         </DataGridTextColumn.CellStyle>
 
                     </DataGridTextColumn>
-
 
                 </DataGrid.Columns>
             </DataGrid>
